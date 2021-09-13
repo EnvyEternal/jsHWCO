@@ -1,17 +1,33 @@
 class autor{
-    static value = 0;
-    constructor(name, work){
+    static valueName = 0;
+    static valueWorks = 0;
+    constructor(name){
         this.name = name;
-        this.work = work;
-        autor.value++
+        this.work = [];
+        autor.valueName++;
+        this.amountWorks = 0;
     }
+    addWork(work){
+        this.work.push(work);
+        autor.valueWorks++;
+        this.amountWorks++
+    }
+
     static getValue(){
-        return this.value;
+        return `Number of Authors: ${this.valueName}; Number of Works: ${this.valueWorks}`
     }
+    getInfo(){
+        console.log(`${this.name}`)
+    }
+   getValueWork(x){
+       console.log(x.amountWorks)
+   }
 }
-const autor1 = new autor("Tom", "Titanic");
-const autor2 = new autor("Tom", "Eliphan");
-const autor3 = new autor("Elsa", "Lion");
+const autor1 = new autor("Tom");
+const autor2 = new autor("Elsa");
+autor1.addWork("Titanic");
+autor1.addWork("Lion");
+autor2.addWork("Titanic")
 
-
+console.log(autor1)
 console.log(autor.getValue())
