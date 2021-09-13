@@ -23,7 +23,7 @@ class autor{
        console.log(x.amountWorks)
    }
    infoAll() {
-    console.log(`Hello my name is ${this.name}:, its my work ${this.work}`);
+    console.log(`Hello my name is ${this.name}, its my work ${this.work}`);
     
     }
 }
