@@ -22,6 +22,10 @@ class autor{
    getValueWork(x){
        console.log(x.amountWorks)
    }
+   infoAll() {
+    console.log(`Hello my name is ${this.name}:, its my work ${this.work}`);
+    
+    }
 }
 const autor1 = new autor("Tom");
 const autor2 = new autor("Elsa");
@@ -31,3 +35,4 @@ autor2.addWork("Titanic")
 
 console.log(autor1)
 console.log(autor.getValue())
+autor1.infoAll()
